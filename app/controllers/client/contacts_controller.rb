@@ -12,9 +12,11 @@ class Client::ContactsController < ApplicationController
   def create
     input_parameters = {
       first_name: params['first_name'],
+      middle_name: params['middle_name'],
       last_name: params['last_name'],
       email: params['email'],
-      phone_number: params['phone_number']
+      phone_number: params['phone_number'],
+      bio: params['bio']
     }
     response = Unirest.post("localhost:3000/api/contacts", parameters: input_parameters)
     @contact = response.body
@@ -36,9 +38,11 @@ class Client::ContactsController < ApplicationController
   def update
     input_parameters = {
       first_name: params['first_name'],
+      middle_name: params['middle_name'],
       last_name: params['last_name'],
       email: params['email'],
-      phone_number: params['phone_number']
+      phone_number: params['phone_number'],
+      bio: params['bio']
     }
     response = Unirest.patch("localhost:3000/api/contacts/#{params[:id]}", parameters: input_parameters)
     @contact = response.body

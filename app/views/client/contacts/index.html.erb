@@ -1,7 +1,9 @@
 <% @contacts.each do |contact| %>
-  <p>First Name: <%= contact['contact_entry']['first_name'] %></p>
-  <p>Last Name: <%= contact['contact_entry']['last_name'] %></p>
-  <p>Email: <%= contact['contact_entry']['email'] %></p>
-  <p>Phone Number: <%= contact['contact_entry']['phone_number'] %></p>
+  <p>First Name: <%= contact['first_name'] %></p>
+  <p>Middle Name: <%= contact['middle_name'] %></p>
+  <p>Last Name: <%= contact['last_name'] %></p>
+  <p>Email: <%= contact['email'] %></p>
+  <p>Phone Number: <%= contact['phone_number'] %></p>
+  <p>Bio: <%= contact['bio'] %></p>
   <hr>
 <% end %>
