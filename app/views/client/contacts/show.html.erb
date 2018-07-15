@@ -4,3 +4,7 @@
   <p>Email: <%= @contact['email'] %></p>
   <p>Phone Number: <%= @contact['phone_number'] %></p>
   <p>Bio: <%= @contact['bio'] %></p>
+  <% if @contact['odor'] %>
+    <p>Odor: <%= @contact['odor'] %></p> 
+  <% end %>
+  <p>User: <%= @contact['user']['name'] %></p>
